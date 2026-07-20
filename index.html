@@ -61,9 +61,12 @@ border-radius:10px;
 position:relative;
 cursor:pointer;
 transition:.4s;
+transform-style:preserve-3d;
 box-shadow:0 0 25px rgba(255,215,0,.4);
 }
-
+.envelope.open{
+transform:rotateX(15deg) scale(1.05);
+}
 .envelope:before{
 content:"";
 position:absolute;
