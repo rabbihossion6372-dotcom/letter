@@ -387,6 +387,18 @@ document.getElementById("letter").style.display="block";
 function openEnvelope(){
 document.getElementById("env").classList.toggle("open");
 }
+ setInterval(()=>{
+const s=document.createElement("div");
+s.className="sparkle";
+s.style.left=Math.random()*100+"%";
+s.style.top="90%";
+document.body.appendChild(s);
+
+setTimeout(()=>{
+s.remove();
+},3000);
+
+},300);
 const hearts=document.getElementById("hearts");
 setInterval(()=>{
 const h=document.createElement("div");
