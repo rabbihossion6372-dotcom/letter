@@ -385,7 +385,25 @@ function openLetter(){
 document.getElementById("letter").style.display="block";
 }
 function openEnvelope(){
+
 document.getElementById("env").classList.toggle("open");
+
+for(let i=0;i<20;i++){
+
+let s=document.createElement("div");
+s.className="sparkle";
+
+s.style.left="50%";
+s.style.top="40%";
+
+document.body.appendChild(s);
+
+setTimeout(()=>{
+s.remove();
+},3000);
+
+}
+
 }
  setInterval(()=>{
 const s=document.createElement("div");
