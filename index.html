@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💌 তোমার জন্য</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:SolaimanLipi, Arial, sans-serif;
+background:linear-gradient(135deg,#0f0f0f,#1b1b1b,#2b1d0e);
+color:#fff;
+overflow-x:hidden;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px 20px;
+text-align:center;
+}
+
+h1{
+font-size:35px;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.sub{
+font-size:18px;
+opacity:.8;
+margin-bottom:35px;
+}
+
+.envelope{
+width:220px;
+height:140px;
+margin:auto;
+background:#d8b56a;
+border-radius:10px;
+position:relative;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 0 25px rgba(255,215,0,.4);
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:0;
+height:0;
+border-left:110px solid transparent;
+border-right:110px solid transparent;
+border-top:70px solid #f1cf83;
+transform-origin:top;
+transition:.8s;
+}
+
+.envelope:hover{
+transform:scale(1.05);
+}
+
+.letter{
+display:none;
+margin-top:40px;
+background:#181818;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,215,0,.2);
+text-align:left;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.line{
+padding:10px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+font-size:18px;
+line-height:1.8;
+}
+
+.end{
+text-align:center;
+margin-top:35px;
+font-size:22px;
+color:#FFD700;
+}
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+left:0;
+top:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+color:#ff4d6d;
+font-size:22px;
+animation:float 8s linear infinite;
+opacity:.6;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+}
+
+button{
+margin-top:25px;
+padding:15px 35px;
+font-size:18px;
+background:#FFD700;
+border:none;
+border-radius:40px;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+
+<h1>💌 প্রিয় বউ জান</h1>
+
+<p class="sub">
+তোমার জন্য লেখা ১০১টি অনুভূতি... ❤️
+</p>
+
+<div class="envelope" id="env"></div>
+
+<button onclick="openLetter()">
+💖 খাম খুলুন
+</button>
+
+<div class="letter" id="letter">
+
+<div class="line">০—প্রিয় বউ জান,,? ❤️</div>
+<div class="line">০১—তুমি আমার পৃথিবী</div>
+<div class="line">০২—তুমি ছাড়া শূন্য আমি</div>
+<div class="line">০৩—ভালোবাসা মানে হৃদয়ের হাসি</div>
+<div class="line">০৪—হৃদয়ের প্রতিটি স্পন্দনে শুধু তুমি</div>
+<div class="line">০৫—ভালোবাসা মানেই নিঃস্বার্থ অনুভূতি</div>
+<div class="line">০৬—ভালোবাসা দিলে ভালোবাসাই ফিরে আসে</div>
+<div class="line">০৭—ভালোবাসা হলো জীবনের শ্রেষ্ঠ উপহার</div>
+<div class="line">০৮—ভালোবাসা ছাড়া জীবন অসম্পূর্ণ</div>
+<div class="line">০৯—তোমার ভালোবাসা মানেই হৃদয়ের শক্তি</div>
+<div class="line">১০—ভালোবাসা মানেই হাজারও রঙের স্বপ্ন</div>
+<div class="line">১১—বিশ্বাসেই ভালোবাসা</div>
+<div class="line">১২—ভালোবাসা মানেই ভরসা</div>
+<div class="line">১৩—যত্নের নামই ভালোবাসা</div>
+<div class="line">১৪—ভালোবাসা মানে আস্থা</div>
+<div class="line">১৫—ভালোবাসা থাকলে দূরত্বেও কষ্ট হয়</div>
