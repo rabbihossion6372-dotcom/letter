@@ -185,7 +185,8 @@ transform:scale(1.05);
 তোমার জন্য লেখা ১০১টি অনুভূতি... ❤️
 </p>
 
-<div class="envelope" id="env"></div>
+<div class="envelope" id="env"
+ onclick="openEnvelope()"></div>
 
 <button onclick="openLetter()">
 💖 খাম খুলুন
@@ -308,7 +309,9 @@ transform:scale(1.05);
 function openLetter(){
 document.getElementById("letter").style.display="block";
 }
-
+function openEnvelope(){
+document.getElementById("env").classList.toggle("open");
+}
 const hearts=document.getElementById("hearts");
 setInterval(()=>{
 const h=document.createElement("div");
