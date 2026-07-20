@@ -4,14 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>💌 তোমার জন্য</title>
+.heart{
+position:fixed;
+font-size:20px;
+animation:fall 6s linear infinite;
+pointer-events:none;
+z-index:9999;
+}
 
+@keyframes fall{
+0%{
+transform:translateY(-10vh);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
+<script>
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
 
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+
+}, 500);
+</script>
 body{
 font-family:SolaimanLipi, Arial, sans-serif;
 background:linear-gradient(135deg,#0f0f0f,#1b1b1b,#2b1d0e);
