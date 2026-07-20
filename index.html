@@ -388,10 +388,6 @@ function openLetter(){
     music.play();
 }
 
-document.getElementById("letter").style.display = "block";
-
-document.getElementById("bgm").play();
-
 for(let i=0;i<20;i++){
 
 let s=document.createElement("div");
@@ -406,7 +402,6 @@ setTimeout(()=>{
 s.remove();
 },3000);
 
-}
 
 }
  setInterval(()=>{
