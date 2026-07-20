@@ -117,7 +117,7 @@ padding:30px;
 border-radius:20px;
 box-shadow:0 0 20px rgba(255,215,0,.2);
 text-align:left;
-animation:fade 1s;
+animation:letterShow 1.5s;
 }
 
 @keyframes fade{
@@ -130,7 +130,16 @@ opacity:1;
 transform:translateY(0);
 }
 }
-
+@keyframes letterShow{
+from{
+opacity:0;
+transform:translateY(80px) scale(.8);
+}
+to{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+}
 .line{
 padding:10px 0;
 border-bottom:1px solid rgba(255,255,255,.08);
